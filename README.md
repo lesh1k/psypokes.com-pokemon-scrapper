@@ -1,6 +1,6 @@
 ## psypoke.com scrapper  
 
-Downloads all pokemon images and renames them accordingly (e.g. instead of 001.png, it will be #001Bulbasaur.png)  
+NodeJS script to download all pokemon images and renames them accordingly (e.g. instead of 001.png, it will be #001Bulbasaur.png)  
 
 There are two versions of the script:  
 - Single process ([index.js](index.js)) [Run time 500s-700s]  
