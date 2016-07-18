@@ -9,6 +9,7 @@
   "author": "Alexei Dvorac",
   "license": "MIT",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "node-fetch": "^1.5.3"
   }
 }
