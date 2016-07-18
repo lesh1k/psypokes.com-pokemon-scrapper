@@ -14,23 +14,6 @@ const IMG_EXTENSION = '.png';
 
 co(scrapePage(START_URL));
 
-function* scrape() {
-    const URLS = getAllUrls(START_URL);
-    for (let i = 0; i < URLS.length; i++) {
-        yield * scrapePage(URLS[i]);
-    }
-}
-
-function* getAllUrls(url) {
-    const response = yield fetch(url);
-    const html = response.text;
-    const $ = cheerio.load(html);
-    const $urls = $('.vertical_padded').first().find('a');
-    return $urls.map((i, url) => {
-        return ROOT_URL + $(url).attr('href');
-    });
-}
-
 function* scrapePage(url) {
     const response = yield fetch(url);
     const html = yield response.text();
@@ -53,7 +36,4 @@ function* scrapePage(url) {
         });
     });
     resp.pipe(file);
-
-    // helpers.cleanFile(filename);
-    // helpers.writeToFile(filename, img_data);
 }
