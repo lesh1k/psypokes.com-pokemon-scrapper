@@ -7,4 +7,7 @@ There are two versions of the script:
 - Multi-process, spawning one worker per each CPU core ([distributed.js](distributed.js)) [Run time ~80s]  
 
 Both versions are intended to give the same output.  
-The distributed version runs on average 80 seconds, while the single-process runs in-between 500 and 700 seconds.
+The distributed version runs on average 80 seconds, while the single-process runs in-between 500 and 700 seconds.  
+
+NOTE: To run locally, in the root directory of the project, create two folders `pokemons` and `pokemons_distributed`, these are the directories where [index.js](index.js) and [distributed.js](distributed.js), respectively, save downloaded images.  
+NOTE #2: To be sure that you have all required NPM packages either check [package.json](package.json) OR run `npm install` from root directory of the project.
